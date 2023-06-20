@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{3EE2234D-D334-423C-B1A4-2CB781695E12}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>17.0.33015.44</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;D3D_DEBUG_INFO;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>StackFrameRuntimeCheck</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>.\Debug/shootergame.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level1</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAsManaged>false</CompileAsManaged>
+    </ClCompile>
+    <CustomBuildStep>
+      <Command>copy $(TargetPath) C:\shared-tests\shootergame\
+</Command>
+      <Outputs>C:\shared-tests\shootergame\$(TargetFileName);%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>zlibstat.lib;kernel32.lib;dsound.lib;strmiids.lib;dinput8.lib;d3d9.lib;d3dx9.lib;dxguid.lib;winmm.lib;Version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Debug/shootergame.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/shootergame.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>WinMain</EntryPointSymbol>
+      <IgnoreSpecificDefaultLibraries>libc.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/shootergame.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>.\Release/shootergame.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <CustomBuildStep>
+      <Command>copy $(TargetPath) C:\shared-tests\shootergame\
+</Command>
+      <Outputs>C:\shared-tests\shootergame\$(TargetFileName);%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>zlibstat.lib;kernel32.lib;wsock32.lib;dsound.lib;strmiids.lib;dinput8.lib;d3d9.lib;d3dx9.lib;dxguid.lib;winmm.lib;odbc32.lib;odbccp32.lib;Version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Release/fwound.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>.\Release/shootergame.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>WinMain</EntryPointSymbol>
+      <IgnoreSpecificDefaultLibraries>libc.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/shootergame.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="cDemo.cpp" />
+    <ClCompile Include="Core.cpp" />
+    <ClCompile Include="cProps.cpp" />
+    <ClCompile Include="cTextures.cpp" />
+    <ClCompile Include="EndLevel.cpp" />
+    <ClCompile Include="enemies.cpp" />
+    <ClCompile Include="enemy-src\enemy_bonesy.cpp" />
+    <ClCompile Include="enemy-src\enemy_electrononce.cpp" />
+    <ClCompile Include="enemy-src\enemy_ghost.cpp" />
+    <ClCompile Include="enemy-src\enemy_hardrock.cpp" />
+    <ClCompile Include="enemy-src\enemy_jawfish.cpp" />
+    <ClCompile Include="enemy-src\enemy_mine.cpp" />
+    <ClCompile Include="enemy-src\enemy_murderorb.cpp" />
+    <ClCompile Include="enemy-src\enemy_rat.cpp" />
+    <ClCompile Include="enemy-src\enemy_sickzombie.cpp" />
+    <ClCompile Include="enemy-src\enemy_soldier.cpp" />
+    <ClCompile Include="enemy-src\enemy_solider_m16.cpp" />
+    <ClCompile Include="enemy-src\enemy_solider_smaw.cpp" />
+    <ClCompile Include="enemy-src\enemy_statue.cpp" />
+    <ClCompile Include="enemy_bird.cpp" />
+    <ClCompile Include="enemy_soldierturret.cpp" />
+    <ClCompile Include="enemy_solider.cpp" />
+    <ClCompile Include="enemy_zombie.cpp" />
+    <ClCompile Include="Entitys.cpp" />
+    <ClCompile Include="FlyingMachine.cpp" />
+    <ClCompile Include="GameInput.cpp" />
+    <ClCompile Include="GameIntro.cpp" />
+    <ClCompile Include="GameOver.cpp" />
+    <ClCompile Include="GarrysSoundWrapper.cpp" />
+    <ClCompile Include="garryswrappers\GarrysGraphicsWrapper.cpp" />
+    <ClCompile Include="garryswrappers\GarrysHelperFunctions.cpp" />
+    <ClCompile Include="garryswrappers\getdxver.cpp" />
+    <ClCompile Include="Gui.cpp" />
+    <ClCompile Include="Landscape.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
+    <ClCompile Include="Options.cpp" />
+    <ClCompile Include="particles.cpp" />
+    <ClCompile Include="Players.cpp" />
+    <ClCompile Include="Weapons.cpp" />
+    <ClCompile Include="winmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\FMOD\api\inc\fmod.h" />
+    <ClInclude Include="..\..\FMOD\api\inc\fmoddyn.h" />
+    <ClInclude Include="..\..\FMOD\api\inc\fmod_errors.h" />
+    <ClInclude Include="..\..\FMOD\api\inc\wincompat.h" />
+    <ClInclude Include="cDemo.h" />
+    <ClInclude Include="Core.h" />
+    <ClInclude Include="cProps.h" />
+    <ClInclude Include="cTextures.h" />
+    <ClInclude Include="EndLevel.h" />
+    <ClInclude Include="enemies.h" />
+    <ClInclude Include="enemy-src\enemy_bonesy.h" />
+    <ClInclude Include="enemy-src\enemy_electrononce.h" />
+    <ClInclude Include="enemy-src\enemy_ghost.h" />
+    <ClInclude Include="enemy-src\enemy_hardrock.h" />
+    <ClInclude Include="enemy-src\enemy_jawfish.h" />
+    <ClInclude Include="enemy-src\enemy_mine.h" />
+    <ClInclude Include="enemy-src\enemy_murderorb.h" />
+    <ClInclude Include="enemy-src\enemy_rat.h" />
+    <ClInclude Include="enemy-src\enemy_sickzombie.h" />
+    <ClInclude Include="enemy-src\enemy_solider.h" />
+    <ClInclude Include="enemy-src\enemy_solider_m16.h" />
+    <ClInclude Include="enemy-src\enemy_solider_smaw.h" />
+    <ClInclude Include="enemy-src\enemy_statue.h" />
+    <ClInclude Include="enemy_bird.h" />
+    <ClInclude Include="enemy_soldierturret.h" />
+    <ClInclude Include="enemy_zombie.h" />
+    <ClInclude Include="Entitys.h" />
+    <ClInclude Include="FlyingMachine.h" />
+    <ClInclude Include="GameInput.h" />
+    <ClInclude Include="GameIntro.h" />
+    <ClInclude Include="GameOver.h" />
+    <ClInclude Include="GarrysSoundWrapper.h" />
+    <ClInclude Include="garryswrappers\GarrysGraphicsWrapper.h" />
+    <ClInclude Include="garryswrappers\GarrysHelperFunctions.h" />
+    <ClInclude Include="Globals.h" />
+    <ClInclude Include="Gui.h" />
+    <ClInclude Include="Landscape.h" />
+    <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="MapEditor\entity-defs.h" />
+    <ClInclude Include="Options.h" />
+    <ClInclude Include="particle-definitions.h" />
+    <ClInclude Include="Players.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="skills.h" />
+    <ClInclude Include="Weapons.h" />
+    <ClInclude Include="winmain.h" />
+    <ClInclude Include="zlib\ioapi.h" />
+    <ClInclude Include="zlib\unzip.h" />
+    <ClInclude Include="zlib\zconf.h" />
+    <ClInclude Include="zlib\zip.h" />
+    <ClInclude Include="zlib\zlib.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resources.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="changes.txt" />
+    <Text Include="consolecommands.txt" />
+    <Text Include="errors.txt" />
+    <Text Include="fwound\data\weapons\ak47.txt" />
+    <Text Include="fwound\data\weapons\bat.txt" />
+    <Text Include="fwound\data\weapons\berertta.txt" />
+    <Text Include="fwound\data\weapons\bow.txt" />
+    <Text Include="fwound\data\weapons\chainsaw.txt" />
+    <Text Include="fwound\data\weapons\crossbow.txt" />
+    <Text Include="fwound\data\weapons\deagle.txt" />
+    <Text Include="fwound\data\weapons\flamer.txt" />
+    <Text Include="fwound\data\weapons\grenadelauncher.txt" />
+    <Text Include="fwound\data\weapons\handgrenade.txt" />
+    <Text Include="fwound\data\weapons\landmine.txt" />
+    <Text Include="fwound\data\weapons\m16.txt" />
+    <Text Include="fwound\data\weapons\m60.txt" />
+    <Text Include="fwound\data\weapons\mac10.txt" />
+    <Text Include="fwound\data\weapons\minigun.txt" />
+    <Text Include="fwound\data\weapons\molotov.txt" />
+    <Text Include="fwound\data\weapons\mp5sd.txt" />
+    <Text Include="fwound\data\weapons\python.txt" />
+    <Text Include="fwound\data\weapons\shotgun.txt" />
+    <Text Include="fwound\data\weapons\smaw.txt" />
+    <Text Include="fwound\data\weapons\TEST-bow.txt" />
+    <Text Include="fwound\data\weapons\TEST-grenadelauncher.txt" />
+    <Text Include="todo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon.bmp" />
+    <Image Include="icon.ico" />
+    <Image Include="mainico.ico" />
+    <Image Include="resources\game.ico" />
+    <Image Include="SBAudigy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="fwound\maps\water.fx">
+      <FileType>Document</FileType>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\Microsoft.DXSDK.D3DX.9.29.952.8\build\native\Microsoft.DXSDK.D3DX.targets" Condition="Exists('packages\Microsoft.DXSDK.D3DX.9.29.952.8\build\native\Microsoft.DXSDK.D3DX.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.DXSDK.D3DX.9.29.952.8\build\native\Microsoft.DXSDK.D3DX.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.DXSDK.D3DX.9.29.952.8\build\native\Microsoft.DXSDK.D3DX.targets'))" />
+  </Target>
+</Project>

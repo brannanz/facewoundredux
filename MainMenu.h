@@ -2,7 +2,7 @@
 
 #include "cTextures.h"
 #include "options.h"
-#include "fmod.h"
+// #include "fmod.h"
 
 class CMainMenu
 {
@@ -36,7 +36,7 @@ public:
 	void DrawTextScroller(void);
 	float scrolloffset;
 	float GuiScale;
-	FSOUND_STREAM* music;
+	// FSOUND_STREAM* music;
 	bool bShowOptions;
 	int musicchannel;
 	void DrawSky(void);

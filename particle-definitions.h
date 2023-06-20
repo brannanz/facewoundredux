@@ -247,7 +247,7 @@
 	ParticleTypes[PARTICLE_BUCKSHOT].gravity = 0.0001f;	
 
 	ParticleTypes[PARTICLE_BLOODBLOBS].life = 1000.0f;
-	ParticleTypes[PARTICLE_BLOODBLOBS].particletexture = pcore->textures.LoadTexture("textures/particles/bloodblob1.tga");
+	ParticleTypes[PARTICLE_BLOODBLOBS].particletexture = pcore->textures.LoadTexture("textures/particles/bloodblob1.bmp");
 	ParticleTypes[PARTICLE_BLOODBLOBS].offsetx = 8.0f;
 	ParticleTypes[PARTICLE_BLOODBLOBS].offsety = 8.0f;
 	ParticleTypes[PARTICLE_BLOODBLOBS].alphaovertime = -0.02f;
@@ -273,7 +273,7 @@
 
 	ParticleTypes[PARTICLE_BLOODMIST].layer = 1;
 	ParticleTypes[PARTICLE_BLOODMIST].life = 200.0f;
-	ParticleTypes[PARTICLE_BLOODMIST].particletexture = pcore->textures.LoadTexture("textures/particles/bloodmist.tga");
+	ParticleTypes[PARTICLE_BLOODMIST].particletexture = pcore->textures.LoadTexture("textures/particles/bloodmist.bmp");
 	ParticleTypes[PARTICLE_BLOODMIST].offsetx = 32.0f;
 	ParticleTypes[PARTICLE_BLOODMIST].offsety = 32.0f;
 	ParticleTypes[PARTICLE_BLOODMIST].alphaovertime = -0.2f;
@@ -1256,7 +1256,7 @@
 	ParticleTypes[PARTICLE_GUI_COUNTDOWN].layer = 2;
 	ParticleTypes[PARTICLE_GUI_COUNTDOWN].gui = true;
 	ParticleTypes[PARTICLE_GUI_COUNTDOWN].life = 1000.0f;
-	ParticleTypes[PARTICLE_GUI_COUNTDOWN].particletexture = pcore->textures.LoadTexture("textures\\gui\\three.tga");
+	ParticleTypes[PARTICLE_GUI_COUNTDOWN].particletexture = pcore->textures.LoadTexture("textures\\gui\\three.bmp");
 	ParticleTypes[PARTICLE_GUI_COUNTDOWN].offsetx = 128.0f;
 	ParticleTypes[PARTICLE_GUI_COUNTDOWN].offsety = 128.0f;
 	ParticleTypes[PARTICLE_GUI_COUNTDOWN].alphaovertime = -0.5f;
@@ -1575,7 +1575,7 @@
 
 	ParticleTypes[PARTICLE_BLOODDECAL].life = 900.0f;
 	ParticleTypes[PARTICLE_BLOODDECAL].layer = 1;
-	ParticleTypes[PARTICLE_BLOODDECAL].particletexture = pcore->textures.LoadTexture("textures\\particles\\blooddecal1.tga");
+	ParticleTypes[PARTICLE_BLOODDECAL].particletexture = pcore->textures.LoadTexture("textures\\particles\\blooddecal1.bmp");
 	ParticleTypes[PARTICLE_BLOODDECAL].offsetx = 0.0f;
 	ParticleTypes[PARTICLE_BLOODDECAL].offsety = 8.0f;
 	ParticleTypes[PARTICLE_BLOODDECAL].alphainit = 150;
@@ -1598,7 +1598,7 @@
 	
 	ParticleTypes[PARTICLE_EXPLOSIONWAVE].layer=10;
 	ParticleTypes[PARTICLE_EXPLOSIONWAVE].life = 2400.0f;
-	ParticleTypes[PARTICLE_EXPLOSIONWAVE].particletexture = pcore->textures.LoadTexture("textures\\particles\\normals\\explodewave.tga");
+	ParticleTypes[PARTICLE_EXPLOSIONWAVE].particletexture = pcore->textures.LoadTexture("textures\\particles\\normals\\explodewave.bmp");
 	ParticleTypes[PARTICLE_EXPLOSIONWAVE].offsetx = 64;
 	ParticleTypes[PARTICLE_EXPLOSIONWAVE].offsety = 64;
 	ParticleTypes[PARTICLE_EXPLOSIONWAVE].alphaovertime = -0.14f;
@@ -1618,7 +1618,7 @@
 
 	ParticleTypes[PARTICLE_WATERRIPPLE].layer=10;
 	ParticleTypes[PARTICLE_WATERRIPPLE].life = 2400.0f;
-	ParticleTypes[PARTICLE_WATERRIPPLE].particletexture = pcore->textures.LoadTexture("textures\\particles\\normals\\ripple.tga");
+	ParticleTypes[PARTICLE_WATERRIPPLE].particletexture = pcore->textures.LoadTexture("textures\\particles\\normals\\ripple.bmp");
 	ParticleTypes[PARTICLE_WATERRIPPLE].offsetx = 32;
 	ParticleTypes[PARTICLE_WATERRIPPLE].offsety = 0;
 	ParticleTypes[PARTICLE_WATERRIPPLE].alphaovertime = -0.12f;
@@ -1637,7 +1637,7 @@
 
 	ParticleTypes[PARTICLE_HEATSHIMMER].layer=10;
 	ParticleTypes[PARTICLE_HEATSHIMMER].life = 2400.0f;
-	ParticleTypes[PARTICLE_HEATSHIMMER].particletexture = pcore->textures.LoadTexture("textures\\particles\\normals\\heat.tga");
+	ParticleTypes[PARTICLE_HEATSHIMMER].particletexture = pcore->textures.LoadTexture("textures\\particles\\normals\\heat.bmp");
 	ParticleTypes[PARTICLE_HEATSHIMMER].offsetx = 32;
 	ParticleTypes[PARTICLE_HEATSHIMMER].offsety = 32;
 	ParticleTypes[PARTICLE_HEATSHIMMER].alphaovertime = -0.07f;
@@ -1657,7 +1657,7 @@
 
 	ParticleTypes[PARTICLE_BENDBEAM].layer=10;
 	ParticleTypes[PARTICLE_BENDBEAM].life = 2400.0f;
-	ParticleTypes[PARTICLE_BENDBEAM].particletexture = pcore->textures.LoadTexture("textures\\particles\\normals\\beam.tga");
+	ParticleTypes[PARTICLE_BENDBEAM].particletexture = pcore->textures.LoadTexture("textures\\particles\\normals\\beam.bmp");
 	ParticleTypes[PARTICLE_BENDBEAM].offsetx = 16;
 	ParticleTypes[PARTICLE_BENDBEAM].offsety = 0;
 	ParticleTypes[PARTICLE_BENDBEAM].alphaovertime = -0.5f;
@@ -1679,7 +1679,7 @@
 
 	ParticleTypes[PARTICLE_SONIC].layer = 10;
 	ParticleTypes[PARTICLE_SONIC].life = 2400.0f;
-	ParticleTypes[PARTICLE_SONIC].particletexture = pcore->textures.LoadTexture("textures\\particles\\normals\\sonic.tga");
+	ParticleTypes[PARTICLE_SONIC].particletexture = pcore->textures.LoadTexture("textures\\particles\\normals\\sonic.bmp");
 	ParticleTypes[PARTICLE_SONIC].offsetx = 16;
 	ParticleTypes[PARTICLE_SONIC].offsety = 16;
 	ParticleTypes[PARTICLE_SONIC].alphaovertime = -0.4f;
@@ -1699,7 +1699,7 @@
 	ParticleTypes[PARTICLE_RAINSCREENDROP].gui = true; 
 	ParticleTypes[PARTICLE_RAINSCREENDROP].layer = 10; 
 	ParticleTypes[PARTICLE_RAINSCREENDROP].life = 2400.0f;
-	ParticleTypes[PARTICLE_RAINSCREENDROP].particletexture = pcore->textures.LoadTexture("textures\\particles\\normals\\water.tga");
+	ParticleTypes[PARTICLE_RAINSCREENDROP].particletexture = pcore->textures.LoadTexture("textures\\particles\\normals\\water.bmp");
 	ParticleTypes[PARTICLE_RAINSCREENDROP].offsetx = 32;
 	ParticleTypes[PARTICLE_RAINSCREENDROP].offsety = 8;
 	ParticleTypes[PARTICLE_RAINSCREENDROP].alphaovertime = -0.03f;
@@ -1723,7 +1723,7 @@
 
 	ParticleTypes[PARTICLE_BUMP].layer = 10;
 	ParticleTypes[PARTICLE_BUMP].life = 2400.0f;
-	ParticleTypes[PARTICLE_BUMP].particletexture = pcore->textures.LoadTexture("textures\\particles\\normals\\smallwave.tga");
+	ParticleTypes[PARTICLE_BUMP].particletexture = pcore->textures.LoadTexture("textures\\particles\\normals\\smallwave.bmp");
 	ParticleTypes[PARTICLE_BUMP].offsetx = 64;
 	ParticleTypes[PARTICLE_BUMP].offsety = 64;
 	ParticleTypes[PARTICLE_BUMP].alphaovertime = -0.1f;
@@ -1741,7 +1741,7 @@
 
 	ParticleTypes[PARTICLE_DENT].layer = 10;
 	ParticleTypes[PARTICLE_DENT].life = 2400.0f;
-	ParticleTypes[PARTICLE_DENT].particletexture = pcore->textures.LoadTexture("textures\\particles\\normals\\dent.tga");
+	ParticleTypes[PARTICLE_DENT].particletexture = pcore->textures.LoadTexture("textures\\particles\\normals\\dent.bmp");
 	ParticleTypes[PARTICLE_DENT].offsetx = 64;
 	ParticleTypes[PARTICLE_DENT].offsety = 64;
 	ParticleTypes[PARTICLE_DENT].alphaovertime = -0.05f;

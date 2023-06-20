@@ -1062,7 +1062,7 @@ void CPlayers::Die(bool Gib)
 	float rnum;
 
 	this->DoDeathSound();
-	pcore->sound.PlayStream(pcore->landscape.music_playerdie);
+	// pcore->sound.PlayStream(pcore->landscape.music_playerdie);
 
 	
 	bDead = true;
@@ -1379,7 +1379,8 @@ void CPlayers::DoMovements(void)
 		{
 			if (m_iState==PLAYERSTATE_WALKING)
 			{
-				for (int yup=1;yup<34;yup++) // step up
+				int yup = 0;
+				for (yup=1;yup<34;yup++) // step up
 				{
 					SetGRect(&target_rect, my_rect.left+movx, my_rect.top-yup, my_rect.right+movx,my_rect.bottom-yup); 
 					if (!pcore->landscape.Collision(&target_rect))

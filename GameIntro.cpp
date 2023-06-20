@@ -81,22 +81,22 @@ void CGameIntro::Init(void)
 {
 	fTimer = 0;
 	t_mainlogo = pcore->textures.LoadTexture("textures/menu/facepunch.jpg");
-	t_palette = pcore->textures.LoadTexture("textures/menu/palette.tga");
+	t_palette = pcore->textures.LoadTexture("textures/menu/palette.bmp");
 //	t_subtitle = pcore->textures.LoadTexture("textures/menu/facepunch-subtitle.bmp");
 	Initiated=true;
 	//ShowCursor(false);
 	GuiScale = (pcore->gfx.m_d3dpp.BackBufferWidth+pcore->gfx.m_d3dpp.BackBufferHeight)/((float)1024+768);
 
-	music = pcore->sound.LoadStream("sound/music/facepunch.ogg", false);
-	pcore->sound.PlayStream(music);
+	// music = pcore->sound.LoadStream("sound/music/facepunch.ogg", false);
+	// pcore->sound.PlayStream(music);
 
 }
 
 void CGameIntro::UnInit(void)
 {
 	// todo: release old textures
-	pcore->sound.CloseStream(music);
-	music=NULL;
+	// pcore->sound.CloseStream(music);
+	// music=NULL;
 	pcore->toMenuScreen();
 	Initiated=false;
 }

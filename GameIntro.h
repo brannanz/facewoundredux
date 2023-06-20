@@ -1,7 +1,7 @@
 #pragma once
 
 #include "cTextures.h"
-#include "fmod.h"
+//#include "fmod.h"
 
 
 class CGameIntro
@@ -22,6 +22,6 @@ public:
 	LPDIRECT3DTEXTURE9 t_mainlogo;
 	LPDIRECT3DTEXTURE9 t_palette;
 	LPDIRECT3DTEXTURE9 t_subtitle;
-	FSOUND_STREAM* music;
+	// FSOUND_STREAM* music;
 	void DrawLogo(float alpha);
 };

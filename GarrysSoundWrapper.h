@@ -2,13 +2,14 @@
 
 #include <windows.h>
 #include <stdio.h>
+// bran: ancient d3dx
 #include <d3dx9.h>
-#include <dxerr9.h>
+// #include <dxerr9.h>
 #include <dinput.h>
 
 
 
-#include "fmod.h"
+// #include "fmod.h"
 
 #define S_ZOMBIE_SIGHTED1		0
 #define S_ZOMBIE_SIGHTED2		1
@@ -97,13 +98,13 @@ class CCore;
 struct sSound
 {
 	char fn[100];
-	FSOUND_SAMPLE* samp;
+	// FSOUND_SAMPLE* samp;
 	unsigned int priority;
 
 	sSound* Next;
 	sSound()
 	{
-		samp=NULL;
+		// samp=NULL;
 		Next=NULL;
 	}
 
@@ -137,9 +138,9 @@ public:
 	int PlayFromFilename(char* filename, float x=0, float y=0, float z=0);
 	unsigned int NumSoundsPlaying;
 	void RefreshSound(void);
-	FSOUND_STREAM * LoadStream(char * filename, bool loop);
-	int PlayStream(FSOUND_STREAM* stream);
-	void CloseStream(FSOUND_STREAM* stream);
+	void * LoadStream(char * filename, bool loop);
+	int PlayStream(void* stream);
+	void CloseStream(void* stream);
 	void FreeAll();
 	bool IsPlaying(int channel);
 	void StopSound(int channel);

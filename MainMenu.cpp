@@ -139,7 +139,7 @@ void CMainMenu::Draw(void)
 
 void CMainMenu::Init(void)
 {
-	FSOUND_DSP_SetActive(FSOUND_DSP_GetFFTUnit(), TRUE);
+	// FSOUND_DSP_SetActive(FSOUND_DSP_GetFFTUnit(), TRUE);
 
 	GuiScale = (pcore->gfx.m_d3dpp.BackBufferWidth+pcore->gfx.m_d3dpp.BackBufferHeight)/((float)1024+768);
 	f_timer = 0;
@@ -155,17 +155,17 @@ void CMainMenu::Init(void)
 		EscapeKeyDown = true;
 	}
 
-	t_menubits	= pcore->textures.LoadTexture("textures/menu/menu_bits.tga");
-	t_menua		= pcore->textures.LoadTexture("textures/menu/logoa.tga");
-	t_menub		= pcore->textures.LoadTexture("textures/menu/logob.tga");
-	t_glint		= pcore->textures.LoadTexture("textures/menu/glint.tga");
-	picture		= pcore->textures.LoadTexture("textures/menu/menuscreen.tga");
+	t_menubits	= pcore->textures.LoadTexture("textures/menu/menu_bits.bmp");
+	t_menua		= pcore->textures.LoadTexture("textures/menu/logoa.bmp");
+	t_menub		= pcore->textures.LoadTexture("textures/menu/logob.bmp");
+	t_glint		= pcore->textures.LoadTexture("textures/menu/glint.bmp");
+	picture		= pcore->textures.LoadTexture("textures/menu/menuscreen.bmp");
 
 	xscale = GuiScale;
 	yscale = GuiScale;
 
-	music = pcore->sound.LoadStream("sound/music/menuscreen.ogg",true);
-	musicchannel = pcore->sound.PlayStream(music);
+	// music = pcore->sound.LoadStream("sound/music/menuscreen.ogg",true);
+	// musicchannel = pcore->sound.PlayStream(music);
 	pcore->RefreshMusicVolume();
 
 	this->options.pcore = pcore;
@@ -229,7 +229,7 @@ void CMainMenu::DrawMainLogo(void)
 	float alpha = f_timer*50.0f;
 	if (alpha>255) alpha = 255;
 
-    spectrum = FSOUND_DSP_GetSpectrum(); 
+    // spectrum = FSOUND_DSP_GetSpectrum(); 
 
 	if (spectrum)
 	{
@@ -331,9 +331,9 @@ int CMainMenu::HoveredOver(void)
 
 void CMainMenu::UnInit(void)
 {
-	FSOUND_DSP_SetActive(FSOUND_DSP_GetFFTUnit(), FALSE);
-	pcore->sound.CloseStream(music);
-	music=NULL;
+	// FSOUND_DSP_SetActive(FSOUND_DSP_GetFFTUnit(), FALSE);
+	// pcore->sound.CloseStream(music);
+	// music=NULL;
 	musicchannel=0;
 }
 
@@ -529,9 +529,9 @@ void CMainMenu::DrawSplash(void)
 		SplashTimer = 256;
 	}
 
-    float *spectrum = FSOUND_DSP_GetSpectrum(); 
+    // float *spectrum = FSOUND_DSP_GetSpectrum(); 
 
-	float multiplier=0;
+	/*float multiplier = 0;
 	if (spectrum)
 	{
 		for (int i=100;i<500;i++)
@@ -539,7 +539,7 @@ void CMainMenu::DrawSplash(void)
 			multiplier = multiplier + spectrum[i];
 		}
 		multiplier = multiplier/300.0f;
-	}
+	}*/
 
 
 	int width, alpha, height, oscale;

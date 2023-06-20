@@ -115,7 +115,7 @@ void enemy_statue::Draw(int layer)
 
 bool enemy_statue::LoadStuff(void)
 {
-	t_body = PCORE->textures.LoadTexture("textures/enemies/statue/head.tga");
+	t_body = PCORE->textures.LoadTexture("textures/enemies/statue/head.bmp");
 	s_charge = PCORE->sound.LoadSound(4,"sound/enemies/statue/charge.ogg");
 	s_shoot = PCORE->sound.LoadSound(4,"sound/enemies/statue/shoot.ogg");
 

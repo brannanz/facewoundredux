@@ -1,7 +1,7 @@
 #pragma once
 
 #include "cTextures.h"
-#include "fmod.h"
+//#include "fmod.h"
 
 class CGameOver
 {
@@ -17,5 +17,5 @@ public:
 	CCore* pcore;
 	void UnInit(void);
 	float GuiScale;
-	FSOUND_STREAM* music;
+	//FSOUND_STREAM* music;
 };

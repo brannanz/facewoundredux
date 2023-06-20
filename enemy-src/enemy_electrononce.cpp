@@ -113,7 +113,7 @@ void enemy_electrononce::Draw(int layer)
 
 bool enemy_electrononce::LoadStuff(void)
 {
-	t_body = PCORE->textures.LoadTexture("textures/enemies/electrononce/body.tga");
+	t_body = PCORE->textures.LoadTexture("textures/enemies/electrononce/body.bmp");
 
 	return true;
 }

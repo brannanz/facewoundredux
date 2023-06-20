@@ -161,7 +161,8 @@ bool CGarrysGraphics::ResetDevice(UINT width, UINT height)
 	pcore->LostDevice();
 
 	hr = m_pd3dDevice->TestCooperativeLevel();
-	WriteToLog("<font color=red> Test Coop Returned: (hr %x (%s))</font><br>",hr, DXGetErrorString9(hr));
+	// TODO: replace d3derr stuff -bran
+	// WriteToLog("<font color=red> Test Coop Returned: (hr %x (%s))</font><br>",hr, DXGetErrorString9(hr));
 
 	if (hr==D3DERR_DEVICELOST)
 	{
@@ -195,7 +196,8 @@ bool CGarrysGraphics::ResetDevice(UINT width, UINT height)
 
 		if (hr!=D3D_OK) 
 		{ 
-			WriteToLog("<br><font color=red> DEVICE RESET Failed! (error: hr %x (%s))</font><br>",hr, DXGetErrorString9(hr));
+			// TODO: replace d3derr stuff -bran
+			// WriteToLog("<br><font color=red> DEVICE RESET Failed! (error: hr %x (%s))</font><br>",hr, DXGetErrorString9(hr));
 			if (hr==D3DERR_DEVICELOST)
 			{
 				bSuspended = true; 
@@ -417,7 +419,8 @@ bool CGarrysGraphics::InputRefreshKeyboard()
 
 	if (hr!=DI_OK)
 	{
-		WriteToLog("Keyboard Refresh Failed! (error: hr %x (%s))<br>",hr, DXGetErrorString9(hr));
+		// TODO: replace d3derr stuff -bran
+		// WriteToLog("Keyboard Refresh Failed! (error: hr %x (%s))<br>",hr, DXGetErrorString9(hr));
 		ZeroMemory( &KeyboardState, sizeof(KeyboardState) );
 
 		if (!this->bSuspended)
@@ -438,7 +441,8 @@ bool CGarrysGraphics::InputRefreshMouse()
 	
 	if (hr!=DI_OK)
 	{
-		WriteToLog("Mouse Refresh Failed! (error: hr %x (%s))<br>",hr, DXGetErrorString9(hr));
+		// TODO: replace d3derr stuff -bran
+		// WriteToLog("Mouse Refresh Failed! (error: hr %x (%s))<br>",hr, DXGetErrorString9(hr));
 		ZeroMemory( &MouseState, sizeof(MouseState) );
 		return false; 
 	}    

@@ -653,8 +653,8 @@ void CLandscape::DoBulletParticle(LPParticle pointer , bool*  remove,bool draw)
 	if (PossibleHitEnemy || PossibleHitLandscape || PossibleHitPlayer)
 	for (float dist=0;
 		dist==0 || 
-		(abs(movesin*dist)<abs(xvel*tick)) ||
-		(abs(movecos*dist)<abs(yvel*tick))	;
+		(labs(movesin*dist)< labs(xvel*tick)) || // bran: changed from abs to Labs, cause, headers
+		(labs(movecos*dist)< labs(yvel*tick))	;
 		dist=dist+1)
 	{
 		if (pointer->weapon==WEP_CHAINSAW && pointer->pplayer!=NULL)

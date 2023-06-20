@@ -46,7 +46,7 @@ void COptions::Draw(void)
 void COptions::Init(void)
 {
 	DoingKey=false;
-	t_opbits = pcore->textures.LoadTexture("textures/menu/options.tga");
+	t_opbits = pcore->textures.LoadTexture("textures/menu/options.bmp");
 	mouseover=0;
 
 	buttons[MO_FINISHED].top = SCRH-(100*SCALE);

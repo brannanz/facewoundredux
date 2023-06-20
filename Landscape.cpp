@@ -22,11 +22,11 @@ void CLandscape::Initialize(CGarrysGraphics *p_Gfx)
 	spawny=0;
 	m_tilesize = 32;
 	sprintf(m_NextLevel, "");
-	music=NULL;
+	// music=NULL;
 	enumWeatherMode = WEATHER_OFF;
-	music = NULL;
-	music_playerdie = NULL;
-	music_levelcomplete = NULL;
+	// music = NULL;
+	// music_playerdie = NULL;
+	// music_levelcomplete = NULL;
 
 	srand((unsigned int)timeGetTime());
 //	this->p_mGfx = p_Gfx;
@@ -81,19 +81,19 @@ void CLandscape::Initialize(CGarrysGraphics *p_Gfx)
 	s_watershell1		= pcore->sound.LoadSound(9,"sound/env/watershell1.ogg");
 	s_watershell2		= pcore->sound.LoadSound(9,"sound/env/watershell2.ogg");
 
-	t_water				=  pcore->textures.LoadTexture("textures/props/water.tga");
-	t_normalwater		=  pcore->textures.LoadTexture("textures/props/normal/water.tga");
+	t_water				=  pcore->textures.LoadTexture("textures/props/water.bmp");
+	t_normalwater		=  pcore->textures.LoadTexture("textures/props/normal/water.bmp");
 
-	t_BloodDrips[0]		= pcore->textures.LoadTexture("textures/particles/blooddecal1.tga");
-	t_BloodDrips[1]		= pcore->textures.LoadTexture("textures/particles/blooddecal2.tga");
-	t_BloodDrips[2]		= pcore->textures.LoadTexture("textures/particles/blooddecal3.tga");
-	t_BloodDrips[3]		= pcore->textures.LoadTexture("textures/particles/blooddecal4.tga");
-	t_BloodDrips[4]		= pcore->textures.LoadTexture("textures/particles/blooddecal5.tga");
-	t_BloodDrips[5]		= pcore->textures.LoadTexture("textures/particles/blooddecal6.tga");
+	t_BloodDrips[0]		= pcore->textures.LoadTexture("textures/particles/blooddecal1.bmp");
+	t_BloodDrips[1]		= pcore->textures.LoadTexture("textures/particles/blooddecal2.bmp");
+	t_BloodDrips[2]		= pcore->textures.LoadTexture("textures/particles/blooddecal3.bmp");
+	t_BloodDrips[3]		= pcore->textures.LoadTexture("textures/particles/blooddecal4.bmp");
+	t_BloodDrips[4]		= pcore->textures.LoadTexture("textures/particles/blooddecal5.bmp");
+	t_BloodDrips[5]		= pcore->textures.LoadTexture("textures/particles/blooddecal6.bmp");
 
-	t_BloodBlobs[0] = pcore->textures.LoadTexture("textures/particles/bloodblob1.tga");
-	t_BloodBlobs[1] = pcore->textures.LoadTexture("textures/particles/bloodblob2.tga");
-	t_BloodBlobs[2] = pcore->textures.LoadTexture("textures/particles/bloodblob3.tga");
+	t_BloodBlobs[0] = pcore->textures.LoadTexture("textures/particles/bloodblob1.bmp");
+	t_BloodBlobs[1] = pcore->textures.LoadTexture("textures/particles/bloodblob2.bmp");
+	t_BloodBlobs[2] = pcore->textures.LoadTexture("textures/particles/bloodblob3.bmp");
 
 
 
@@ -126,22 +126,22 @@ void CLandscape::LoadMap(const char *inf)
 	this->WaterLineVelocity = 0;
 
 	pcore->Loading(26);
-	pcore->sound.CloseStream(music);
-	pcore->sound.CloseStream(music_playerdie);
-	pcore->sound.CloseStream(music_levelcomplete);
+	// pcore->sound.CloseStream(music);
+	// pcore->sound.CloseStream(music_playerdie);
+	// pcore->sound.CloseStream(music_levelcomplete);
 
 	pcore->Loading(27);
-	music_levelcomplete = NULL;
-	music_playerdie = NULL;
-	music = NULL;
+	// music_levelcomplete = NULL;
+	// music_playerdie = NULL;
+	// music = NULL;
 	pcore->StartTimer();
 	pcore->b_LoadingMap = true;
 	
 
 	pcore->Loading(28);
 	// queue up the new music
-	music_levelcomplete = pcore->sound.LoadStream("sound/music/levelcomplete.ogg",true);
-	music_playerdie = pcore->sound.LoadStream("sound/music/playerdie.ogg",false);
+	// music_levelcomplete = pcore->sound.LoadStream("sound/music/levelcomplete.ogg",true);
+	// music_playerdie = pcore->sound.LoadStream("sound/music/playerdie.ogg",false);
 	pcore->Loading(33);
 
 	char filename[500];
@@ -271,7 +271,7 @@ void CLandscape::LoadMap(const char *inf)
 
 	pcore->Loading(48);
 
-	for (i=0;i<numents;i++)
+	for (int i=0;i<numents;i++)
 	{
 		gzread(file, &LoadEnt,sizeof(LoadEnt));
 
@@ -1698,7 +1698,8 @@ void CLandscape::BulletHitLandscape(LPParticle particle)
 
 int CLandscape::RegisterPlayer(CPlayers* player)
 {
-	for (int i=0;i<MAX_PLAYERS;i++)
+	int i;
+	for (i=0;i<MAX_PLAYERS;i++)
 	{
 		if (playerlist[i].inuse==false)
 		{
@@ -2076,7 +2077,8 @@ void CLandscape::DrawExplosion(float x, float y, int size)
 
 //	AddParticle(PARTICLE_EXPLOSIONWAVE,x,y);
 
-	for (int i=0;i<3;i++)
+	int i;
+	for (i=0;i<3;i++)
 	{
 		AddParticle(PARTICLE_EXPLOSIONSMOKE,x,y);
 	}
@@ -2273,14 +2275,16 @@ void CLandscape::DrawRect(RECT *rct)
 
 void CLandscape::DrawRect(GRECT *rct)
 {
-	pcore->gfx.SpriteDrawEx(this->ParticleTypes[PARTICLE_SPARKBALL].particletexture,
+	// TODO: fix this, like right now cause
+	// this is not good. -bran
+	/*pcore->gfx.SpriteDrawEx(this->ParticleTypes[PARTICLE_SPARKBALL].particletexture,
 					(rct->left-offset_x)*m_zoom,
 					(rct->top-offset_y)*m_zoom,
 					0,0,0,
 					abs(rct->left-rct->right)*m_zoom,
 					abs(rct->top-rct->bottom)*m_zoom,
 					16,16,1,1,
-					100,255,255,255);
+					100,255,255,255);*/
 }
 void CLandscape::GenericBloodSpurt(float x, float y, float angle, float speed, CPlayers* player)
 {

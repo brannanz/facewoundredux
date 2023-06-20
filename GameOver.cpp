@@ -64,12 +64,12 @@ void CGameOver::Init(void)
 		EscapeKeyDown = true;
 	}
 
-	music = pcore->sound.LoadStream("sound/music/gameover.ogg",true);
-	pcore->sound.PlayStream(music);
+	// music = pcore->sound.LoadStream("sound/music/gameover.ogg",true);
+	// pcore->sound.PlayStream(music);
 }
 
 void CGameOver::UnInit(void)
 {
-	pcore->sound.CloseStream(music);
-	music=NULL;
+	// pcore->sound.CloseStream(music);
+	// music=NULL;
 }
