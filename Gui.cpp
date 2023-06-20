@@ -60,26 +60,26 @@ void CGui::Startup(void)
 	if (t_WeaponSlotNumbers==NULL)
 	{
 		pcore->gfx.WriteToLog("GUI: Loading wep_numbers.bmp..<br>");
-		t_WeaponSlotNumbers = pcore->textures.LoadTexture("textures/gui/wep_numbers.tga");
+		t_WeaponSlotNumbers = pcore->textures.LoadTexture("textures/gui/wep_numbers.bmp");
 	}
 
 	if (t_Colours==NULL)
 	{
 		pcore->gfx.WriteToLog("GUI: Loading colours.bmp..<br>");
-		t_Colours = pcore->textures.LoadTexture("textures/gui/colours.tga");
+		t_Colours = pcore->textures.LoadTexture("textures/gui/colours.bmp");
 	}
 
 	if (t_Numbers==NULL)
 	{
 		pcore->gfx.WriteToLog("GUI: Loading gui_numbers.bmp..<br>");
-		t_Numbers = pcore->textures.LoadTexture("textures/gui/gui_numbers.tga");
+		t_Numbers = pcore->textures.LoadTexture("textures/gui/gui_numbers.bmp");
 	}
 
-	t_Damage = pcore->textures.LoadTexture("textures/gui/damage.tga");
+	t_Damage = pcore->textures.LoadTexture("textures/gui/damage.bmp");
 
-	t_Base = pcore->textures.LoadTexture("textures/gui/gui_base.tga");
-	t_BaseLeft = pcore->textures.LoadTexture("textures/gui/gui_left.tga");
-	t_WepBack = pcore->textures.LoadTexture("textures/gui/dropdown/wep_back.tga");
+	t_Base = pcore->textures.LoadTexture("textures/gui/gui_base.bmp");
+	t_BaseLeft = pcore->textures.LoadTexture("textures/gui/gui_left.bmp");
+	t_WepBack = pcore->textures.LoadTexture("textures/gui/dropdown/wep_back.bmp");
 	
 
 
@@ -180,7 +180,7 @@ void CGui::Startup(void)
 		}
 	}
 
-	t_Locked = pcore->textures.LoadTexture("textures/gui/menu/menu_locked.tga");
+	t_Locked = pcore->textures.LoadTexture("textures/gui/menu/menu_locked.bmp");
 
 
 
@@ -917,8 +917,8 @@ void CGui::RunConsoleCommand(char* inputcommand)
 		{
 			pcore->Settings.enablemusic = false;
 			this->WriteToConsole(0,0,0,0,"Music Disabled");
-			pcore->sound.CloseStream(pcore->landscape.music);
-			pcore->landscape.music=NULL;
+			// pcore->sound.CloseStream(pcore->landscape.music);
+			// pcore->landscape.music=NULL;
 		}
 		else
 		{

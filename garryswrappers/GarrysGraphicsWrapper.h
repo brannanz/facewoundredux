@@ -4,8 +4,10 @@
 
 #include <windows.h>
 #include <stdio.h>
+// bran: thank god for
+// https://www.nuget.org/packages/Microsoft.DXSDK.D3DX
 #include <d3dx9.h>
-#include <dxerr9.h>
+// #include <dxerr9.h>
 #include <dinput.h>
 #include <time.h> // to timestamp the logs
 #include <sys/stat.h>

@@ -5,7 +5,8 @@
 #include "zlib/zlib.h"
 #include "garryswrappers/GarrysGraphicsWrapper.h"
 #include "GarrysSoundWrapper.h"
-#include "fmod.h"
+// #include "fmod.h"
+// bran: lol, open dynamics engine?
 //#include "ode/ode.h"
 
 #define NUM_LANDCAPETEXTURES 10
@@ -537,9 +538,9 @@ public:
 	void ShiftParticles(GRECT* rect, float x, float y);
 	void ScreenShake(float x, float y);
 	void ChangeMap(char* name);
-	FSOUND_STREAM* music;
-	FSOUND_STREAM* music_playerdie;
-	FSOUND_STREAM* music_levelcomplete;
+	// FSOUND_STREAM* music;
+	// FSOUND_STREAM* music_playerdie;
+	// FSOUND_STREAM* music_levelcomplete;
 	void QueueUpIntroVoice(void);
 	char m_NextLevel[100];
 	LPParticle DoChainsawStyleDamage(unsigned int guntype, float angle, float x, float y, float length, float damage);

@@ -34,13 +34,13 @@
 #include "EndLevel.h"
 #include "cDemo.h"
 
+// bran: why wasn't this included?
+#include <d3d9.h>
 
 #define EF_CONTRAST 0
 #define EF_BLUR 1
 #define EF_DOWN 2
 #define EF_LEVELSPECIFIC 3
-
-
 
 struct PPVERT
 {
@@ -56,7 +56,7 @@ struct PPVERT
 
 inline DWORD F2DW( FLOAT f ) { return *((DWORD*)&f); }
 
-inline SQUARED(float val)
+inline float SQUARED(float val)
 {
 	return val*val;
 }

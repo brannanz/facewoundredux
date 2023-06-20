@@ -142,9 +142,9 @@ void enemy_murderorb::Draw(int layer)
 
 bool enemy_murderorb::LoadStuff(void)
 {
-	t_body = PCORE->textures.LoadTexture("textures/enemies/murderorb/body.tga");
-	t_light = PCORE->textures.LoadTexture("textures/enemies/murderorb/lightmap.tga");
-	t_normal = PCORE->textures.LoadTexture("textures/enemies/murderorb/normal.tga");
+	t_body = PCORE->textures.LoadTexture("textures/enemies/murderorb/body.bmp");
+	t_light = PCORE->textures.LoadTexture("textures/enemies/murderorb/lightmap.bmp");
+	t_normal = PCORE->textures.LoadTexture("textures/enemies/murderorb/normal.bmp");
 
 	
 

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "cTextures.h"
-#include "fmod.h"
+// #include "fmod.h"
 #include "GarrysSoundWrapper.h"
 
 struct SCounter
@@ -41,7 +41,7 @@ public:
 	void Init(void);
 	CCore* pcore;
 	void UnInit(void);
-	FSOUND_STREAM* music;
+	// FSOUND_STREAM* music;
 	int musicchannel;
 	void DrawSky(float alpha, float offset);
 	float m_skyx;

@@ -43,7 +43,7 @@ void CEndLevel::Draw(void)
 
 	float *spectrum;
 	float multiplier =0;
-    spectrum = FSOUND_DSP_GetSpectrum(); 
+    // spectrum = FSOUND_DSP_GetSpectrum(); 
 	if (spectrum)
 	{
 		for (int i=100;i<512;i++)
@@ -78,14 +78,14 @@ void CEndLevel::Draw(void)
 void CEndLevel::Init(void)
 {
 	LoadSky("levelend");
-	t_title = pcore->textures.LoadTexture("textures/gui/endlev/levelend.tga");
-	t_c		= pcore->textures.LoadTexture("textures/gui/endlev/c.tga");
-	t_Numbers = pcore->textures.LoadTexture("textures/gui/endlev/numbers.tga");
+	t_title = pcore->textures.LoadTexture("textures/gui/endlev/levelend.bmp");
+	t_c		= pcore->textures.LoadTexture("textures/gui/endlev/c.bmp");
+	t_Numbers = pcore->textures.LoadTexture("textures/gui/endlev/numbers.bmp");
 
-	FSOUND_DSP_SetActive(FSOUND_DSP_GetFFTUnit(), TRUE);
+	// FSOUND_DSP_SetActive(FSOUND_DSP_GetFFTUnit(), TRUE);
 
 	sprintf(cKills.name, "Murders");
-	cKills.t_texture = pcore->textures.LoadTexture("textures/gui/endlev/cmurders.tga");
+	cKills.t_texture = pcore->textures.LoadTexture("textures/gui/endlev/cmurders.bmp");
 	cKills.total = pcore->LevelStats.Enemies;
 	cKills.x = 150*SCALE;
 	cKills.y = 250*SCALE;
@@ -96,7 +96,7 @@ void CEndLevel::Init(void)
 	cKills.current = 0;
 
 	sprintf(cPlutonium.name, "Plutonium");
-	cPlutonium.t_texture = pcore->textures.LoadTexture("textures/gui/endlev/cplutonium.tga");
+	cPlutonium.t_texture = pcore->textures.LoadTexture("textures/gui/endlev/cplutonium.bmp");
 	cPlutonium.total = pcore->LevelStats.Plutonium;
 	cPlutonium.x = 150*SCALE;
 	cPlutonium.y = 300*SCALE;
@@ -107,7 +107,7 @@ void CEndLevel::Init(void)
 	cPlutonium.current = 0;
 
 	sprintf(cBulletsFired.name, "Shots Fired");
-	cBulletsFired.t_texture = pcore->textures.LoadTexture("textures/gui/endlev/cshots.tga");
+	cBulletsFired.t_texture = pcore->textures.LoadTexture("textures/gui/endlev/cshots.bmp");
 	cBulletsFired.total = pcore->LevelStats.ShotsFired;
 	cBulletsFired.x = 150*SCALE;
 	cBulletsFired.y = 375*SCALE;
@@ -118,7 +118,7 @@ void CEndLevel::Init(void)
 	cBulletsFired.current = 0;
 
 	sprintf(cBulletsLanded.name, "Shots Landed");
-	cBulletsLanded.t_texture = pcore->textures.LoadTexture("textures/gui/endlev/chits.tga");
+	cBulletsLanded.t_texture = pcore->textures.LoadTexture("textures/gui/endlev/chits.bmp");
 	cBulletsLanded.total = pcore->LevelStats.ShotsLanded;
 	cBulletsLanded.x = 150*SCALE;
 	cBulletsLanded.y = 425*SCALE;
@@ -132,7 +132,7 @@ void CEndLevel::Init(void)
 	
 
 	sprintf(cAccuracy.name, "Accuracy");
-	cAccuracy.t_texture = pcore->textures.LoadTexture("textures/gui/endlev/caccuracy.tga");
+	cAccuracy.t_texture = pcore->textures.LoadTexture("textures/gui/endlev/caccuracy.bmp");
 	if (pcore->LevelStats.ShotsFired==0)
 	{
 		cAccuracy.total = 50;
@@ -151,7 +151,7 @@ void CEndLevel::Init(void)
 
 
 	sprintf(cSecrets.name, "Secret Areas");
-	cSecrets.t_texture = pcore->textures.LoadTexture("textures/gui/endlev/csecrets.tga");
+	cSecrets.t_texture = pcore->textures.LoadTexture("textures/gui/endlev/csecrets.bmp");
 	cSecrets.total = pcore->LevelStats.HiddenAreas;
 	cSecrets.x = 150*SCALE;
 	cSecrets.y = 525*SCALE;
@@ -168,7 +168,7 @@ void CEndLevel::Init(void)
 
 void CEndLevel::UnInit(void)
 {
-	FSOUND_DSP_SetActive(FSOUND_DSP_GetFFTUnit(), FALSE);
+	// FSOUND_DSP_SetActive(FSOUND_DSP_GetFFTUnit(), FALSE);
 }
 
 void CEndLevel::DrawSky(float alpha, float offset)

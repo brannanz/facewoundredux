@@ -20,9 +20,9 @@ void CGarrysSoundWrapper::Init(void)
 	WriteToLog("Init sound..<br>");
 	m_volume = 1.0f;
 	FirstSound = NULL;
-	FSOUND_Init(22050  , 32, 0);
-	FSOUND_SetDriver(0);   
-	FSOUND_SetMixer(FSOUND_MIXER_AUTODETECT);
+	// FSOUND_Init(22050  , 32, 0);
+	// FSOUND_SetDriver(0);   
+	// FSOUND_SetMixer(FSOUND_MIXER_AUTODETECT);
 	WriteToLog("Finsihed setting up Sound<br>");	
 	soundenabled = true;
 }
@@ -36,8 +36,8 @@ int CGarrysSoundWrapper::PlaySnd(sSound * snd, float x, float y)
 
 int CGarrysSoundWrapper::PlaySnd(sSound * snd, float x, float y, float pitchvariation, float z, float timemultiplieroverride, float volume, bool loop)
 {
-	if (snd==NULL) return -1;
-	if (snd->samp==NULL) return -1;
+	/*if (snd == NULL) return -1;
+	// if (snd->samp==NULL) return -1;
 	if (!soundenabled)return -1;
 	if (NumSoundsPlaying>10 && snd->priority<5) return -1;
 	if (z==-5) z=DEFAULT_LISTENER_DISTANCE;
@@ -66,19 +66,19 @@ int CGarrysSoundWrapper::PlaySnd(sSound * snd, float x, float y, float pitchvari
     float vel[3] = { 0,0,0 };
 
 	int i;
-	FSOUND_3D_Listener_SetAttributes(&listenerpos[0], &vel[0], 0, 0, 1.0f, 0, 1.0f, 0);
-	i = FSOUND_PlaySoundEx(FSOUND_FREE, snd->samp, 0, TRUE);
-	FSOUND_3D_SetAttributes(i, pos, vel);
-    FSOUND_SetVolume(i, 255*m_volume);
+	// FSOUND_3D_Listener_SetAttributes(&listenerpos[0], &vel[0], 0, 0, 1.0f, 0, 1.0f, 0);
+	// i = FSOUND_PlaySoundEx(FSOUND_FREE, snd->samp, 0, TRUE);
+	// FSOUND_3D_SetAttributes(i, pos, vel);
+    // FSOUND_SetVolume(i, 255*m_volume);
 
 	if (pcore->Settings.SoundStretching)
 	{
 		if (timemultiplier!=1 || pitchvariation!=0)
 		FSOUND_SetFrequency(i, 22050*randnum*timemultiplier);
 	}
-	FSOUND_SetPaused(i, FALSE);
+	FSOUND_SetPaused(i, FALSE);*/
 
-	return i;
+	return 0;
 }
 
 void CGarrysSoundWrapper::EnableLogging()
@@ -110,7 +110,7 @@ void CGarrysSoundWrapper::WriteToLog(char *lpszText, ...)
 
 sSound * CGarrysSoundWrapper::LoadSound(unsigned int priority, char* inputname)
 {
-	FSOUND_SAMPLE* loadedsamp;
+	// FSOUND_SAMPLE* loadedsamp;
 	sSound* p;
 	
 	char Filename[500];
@@ -131,9 +131,9 @@ sSound * CGarrysSoundWrapper::LoadSound(unsigned int priority, char* inputname)
 	if (!FileExists(Filename))
 		sprintf(Filename, "%s/%s", DEFAULT_MOD_FOLDER,inputname);
 
-	loadedsamp = FSOUND_Sample_Load(FSOUND_FREE, Filename, FSOUND_HW3D | FSOUND_LOOP_OFF, 0, 0);
+	// loadedsamp = FSOUND_Sample_Load(FSOUND_FREE, Filename, FSOUND_HW3D | FSOUND_LOOP_OFF, 0, 0);
 
-	if (loadedsamp==NULL)
+	/*if (loadedsamp == NULL)
 	{
 		char errormsg[200];
  		sprintf(errormsg," Couldn't load sound:\n  '%s' ",inputname);
@@ -161,7 +161,7 @@ sSound * CGarrysSoundWrapper::LoadSound(unsigned int priority, char* inputname)
 	NewSound->samp = loadedsamp;
 	sprintf(NewSound->fn,inputname);
 
-	return NewSound;
+	return NewSound;*/
 }
 
 int CGarrysSoundWrapper::PlayFromFilename(char* filename, float x, float y, float z)
@@ -174,9 +174,9 @@ void CGarrysSoundWrapper::RefreshSound(void)
 	NumSoundsPlaying=0;
 }
 
-FSOUND_STREAM * CGarrysSoundWrapper::LoadStream(char * filename, bool loop)
+void * CGarrysSoundWrapper::LoadStream(char * filename, bool loop)
 {
-	FSOUND_STREAM *stream;
+	/*FSOUND_STREAM* stream;
 	char Filename[500];
 	sprintf(Filename, "%s/%s", pcore->modfolder,filename);
 	if (!FileExists(Filename))
@@ -188,26 +188,26 @@ FSOUND_STREAM * CGarrysSoundWrapper::LoadStream(char * filename, bool loop)
 	if (stream==NULL)
 	{
 		WriteToLog("Couldn't open stream: '%s'<br>",filename);
-	}
+	}*/
 
-	return stream;
+	return 0;
 }
 
-int CGarrysSoundWrapper::PlayStream(FSOUND_STREAM* stream)
+int CGarrysSoundWrapper::PlayStream(void* stream)
 {
-	if (stream==NULL)
-	{
-		WriteToLog("Attempted to play NULL stream!<br>");
-		return -1;
-	}
+	//if (stream==NULL)
+	//{
+		//WriteToLog("Attempted to play NULL stream!<br>");
+		//return -1;
+	//}
 
-	return FSOUND_Stream_Play(FSOUND_FREE, stream);
+	return 0;
 }
 
-void CGarrysSoundWrapper::CloseStream(FSOUND_STREAM* stream)
+void CGarrysSoundWrapper::CloseStream(void* stream)
 {
-	FSOUND_Stream_Stop(stream);
-	FSOUND_Stream_Close(stream);
+	// FSOUND_Stream_Stop(stream);
+	// FSOUND_Stream_Close(stream);
 }
 
 void CGarrysSoundWrapper::FreeAll()
@@ -223,14 +223,14 @@ void CGarrysSoundWrapper::FreeAll()
 
 bool CGarrysSoundWrapper::IsPlaying(int channel)
 {
-	if (FSOUND_IsPlaying(channel)) return true;
+	//if (FSOUND_IsPlaying(channel)) return true;
 
 	return false;
 }
 
 void CGarrysSoundWrapper::StopSound(int channel)
 {
-	FSOUND_StopSound(channel);
+	//FSOUND_StopSound(channel);
 }
 
 void CGarrysSoundWrapper::UpdateSound(int channel, float x, float y)
@@ -246,14 +246,14 @@ void CGarrysSoundWrapper::UpdateSound(int channel, float x, float y)
 	float pos[3] = {x,y,0};
     float vel[3] = {0,0,0};
 
-	FSOUND_3D_GetAttributes(channel, pos, vel);
+	//FSOUND_3D_GetAttributes(channel, pos, vel);
 	float listenerpos[3] = { 0.0f, -0.0f, DEFAULT_LISTENER_DISTANCE };
 
 	pos[0] = x;
 	pos[1] = y;
 
-	FSOUND_3D_Listener_SetAttributes(&listenerpos[0], &vel[0], 0, 0, 1.0f, 0, 1.0f, 0);
-	FSOUND_3D_SetAttributes(channel, pos, vel);
+	//FSOUND_3D_Listener_SetAttributes(&listenerpos[0], &vel[0], 0, 0, 1.0f, 0, 1.0f, 0);
+	//FSOUND_3D_SetAttributes(channel, pos, vel);
 }
 
 void CGarrysSoundWrapper::UpdateFrequency(void)
@@ -262,26 +262,26 @@ void CGarrysSoundWrapper::UpdateFrequency(void)
 	if (!pcore->Settings.DynamicSoundStretching) return;
 	if (pcore->doStartLevel) return;
 
-	for (int i=0; i<FSOUND_GetMaxChannels();i++)
+	/*for (int i = 0; i<FSOUND_GetMaxChannels(); i++)
 	{
 		if (this->IsPlaying(i))
 		{
 			FSOUND_SetFrequency(i, 22050*pcore->timemultiplier);
 		}
-	}
+	}*/
 }
 
 void CGarrysSoundWrapper::SetChannelVolume(int channel, float volume)
 {
-	FSOUND_SetVolume(channel, 255*volume);
+	//FSOUND_SetVolume(channel, 255*volume);
 }
 
 void CGarrysSoundWrapper::PauseChannel(int channel)
 {
-	FSOUND_SetPaused(channel, TRUE);
+	//FSOUND_SetPaused(channel, TRUE);
 }
 
 void CGarrysSoundWrapper::ResumeChannel(int channel)
 {
-	FSOUND_SetPaused(channel, FALSE);
+	//FSOUND_SetPaused(channel, FALSE);
 }

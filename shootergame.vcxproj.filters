@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{ef667062-0964-4ebc-8cd2-bd1bb922ff6a}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\garryswrappers">
+      <UniqueIdentifier>{0d222a5c-9146-4801-a023-2159375c6a7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\enemies">
+      <UniqueIdentifier>{03460a4e-6eba-42b7-a5e2-55662b121fbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\weapondata">
+      <UniqueIdentifier>{2b077d24-f9bc-4645-ad4f-96c85fdf60f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{757e5a86-ab1f-4f2d-8276-22356c24c16a}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Header Files\garryswrappers.h">
+      <UniqueIdentifier>{1ad8acb3-735c-423b-abe9-ce3c7e099b86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\directx9">
+      <UniqueIdentifier>{4b82153c-0d9f-4f1d-9a41-7586c89ec308}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\zlib">
+      <UniqueIdentifier>{dcabee9c-b4fd-4d89-a14d-ed4879abf46a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Enemies">
+      <UniqueIdentifier>{56d3c881-9a16-4af8-bf5d-58c594acf293}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{16324211-4051-48cc-9eee-7c050bab4238}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{ab7c287c-ef8c-4920-9169-c30169f348da}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Core.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EndLevel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entitys.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlyingMachine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameIntro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GarrysSoundWrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Gui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Landscape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Options.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Players.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Weapons.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cDemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cProps.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cTextures.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy_solider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="particles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="winmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="garryswrappers\GarrysGraphicsWrapper.cpp">
+      <Filter>Source Files\garryswrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="garryswrappers\GarrysHelperFunctions.cpp">
+      <Filter>Source Files\garryswrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="garryswrappers\getdxver.cpp">
+      <Filter>Source Files\garryswrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="enemies.cpp">
+      <Filter>Source Files\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy_bird.cpp">
+      <Filter>Source Files\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy-src\enemy_bonesy.cpp">
+      <Filter>Source Files\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy-src\enemy_electrononce.cpp">
+      <Filter>Source Files\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy-src\enemy_ghost.cpp">
+      <Filter>Source Files\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy-src\enemy_hardrock.cpp">
+      <Filter>Source Files\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy-src\enemy_jawfish.cpp">
+      <Filter>Source Files\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy-src\enemy_mine.cpp">
+      <Filter>Source Files\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy-src\enemy_murderorb.cpp">
+      <Filter>Source Files\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy-src\enemy_rat.cpp">
+      <Filter>Source Files\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy-src\enemy_sickzombie.cpp">
+      <Filter>Source Files\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy-src\enemy_soldier.cpp">
+      <Filter>Source Files\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy_soldierturret.cpp">
+      <Filter>Source Files\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy-src\enemy_solider_m16.cpp">
+      <Filter>Source Files\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy-src\enemy_solider_smaw.cpp">
+      <Filter>Source Files\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy-src\enemy_statue.cpp">
+      <Filter>Source Files\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy_zombie.cpp">
+      <Filter>Source Files\enemies</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EndLevel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlyingMachine.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOver.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cDemo.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MapEditor\entity-defs.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="skills.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy-src\enemy_bonesy.h">
+      <Filter>Source Files\enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy-src\enemy_electrononce.h">
+      <Filter>Source Files\enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy-src\enemy_ghost.h">
+      <Filter>Source Files\enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy-src\enemy_hardrock.h">
+      <Filter>Source Files\enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy-src\enemy_jawfish.h">
+      <Filter>Source Files\enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy-src\enemy_mine.h">
+      <Filter>Source Files\enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy-src\enemy_murderorb.h">
+      <Filter>Source Files\enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy-src\enemy_rat.h">
+      <Filter>Source Files\enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy-src\enemy_sickzombie.h">
+      <Filter>Source Files\enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy-src\enemy_solider.h">
+      <Filter>Source Files\enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy-src\enemy_solider_m16.h">
+      <Filter>Source Files\enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy-src\enemy_solider_smaw.h">
+      <Filter>Source Files\enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy-src\enemy_statue.h">
+      <Filter>Source Files\enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy_zombie.h">
+      <Filter>Source Files\enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Core.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entitys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameIntro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GarrysSoundWrapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Globals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Gui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Landscape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Options.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Players.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Weapons.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cProps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cTextures.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\FMOD\api\inc\fmod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\FMOD\api\inc\fmod_errors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\FMOD\api\inc\fmoddyn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="particle-definitions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\FMOD\api\inc\wincompat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="winmain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="garryswrappers\GarrysGraphicsWrapper.h">
+      <Filter>Header Files\garryswrappers.h</Filter>
+    </ClInclude>
+    <ClInclude Include="garryswrappers\GarrysHelperFunctions.h">
+      <Filter>Header Files\garryswrappers.h</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\ioapi.h">
+      <Filter>Header Files\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\unzip.h">
+      <Filter>Header Files\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\zconf.h">
+      <Filter>Header Files\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\zip.h">
+      <Filter>Header Files\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib\zlib.h">
+      <Filter>Header Files\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="enemies.h">
+      <Filter>Header Files\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy_bird.h">
+      <Filter>Header Files\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy_soldierturret.h">
+      <Filter>Header Files\Enemies</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resources.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="fwound\data\weapons\TEST-bow.txt">
+      <Filter>Source Files\weapondata</Filter>
+    </Text>
+    <Text Include="fwound\data\weapons\TEST-grenadelauncher.txt">
+      <Filter>Source Files\weapondata</Filter>
+    </Text>
+    <Text Include="fwound\data\weapons\ak47.txt">
+      <Filter>Source Files\weapondata</Filter>
+    </Text>
+    <Text Include="fwound\data\weapons\bat.txt">
+      <Filter>Source Files\weapondata</Filter>
+    </Text>
+    <Text Include="fwound\data\weapons\berertta.txt">
+      <Filter>Source Files\weapondata</Filter>
+    </Text>
+    <Text Include="fwound\data\weapons\bow.txt">
+      <Filter>Source Files\weapondata</Filter>
+    </Text>
+    <Text Include="fwound\data\weapons\chainsaw.txt">
+      <Filter>Source Files\weapondata</Filter>
+    </Text>
+    <Text Include="fwound\data\weapons\crossbow.txt">
+      <Filter>Source Files\weapondata</Filter>
+    </Text>
+    <Text Include="fwound\data\weapons\deagle.txt">
+      <Filter>Source Files\weapondata</Filter>
+    </Text>
+    <Text Include="fwound\data\weapons\flamer.txt">
+      <Filter>Source Files\weapondata</Filter>
+    </Text>
+    <Text Include="fwound\data\weapons\grenadelauncher.txt">
+      <Filter>Source Files\weapondata</Filter>
+    </Text>
+    <Text Include="fwound\data\weapons\handgrenade.txt">
+      <Filter>Source Files\weapondata</Filter>
+    </Text>
+    <Text Include="fwound\data\weapons\landmine.txt">
+      <Filter>Source Files\weapondata</Filter>
+    </Text>
+    <Text Include="fwound\data\weapons\m16.txt">
+      <Filter>Source Files\weapondata</Filter>
+    </Text>
+    <Text Include="fwound\data\weapons\m60.txt">
+      <Filter>Source Files\weapondata</Filter>
+    </Text>
+    <Text Include="fwound\data\weapons\mac10.txt">
+      <Filter>Source Files\weapondata</Filter>
+    </Text>
+    <Text Include="fwound\data\weapons\minigun.txt">
+      <Filter>Source Files\weapondata</Filter>
+    </Text>
+    <Text Include="fwound\data\weapons\molotov.txt">
+      <Filter>Source Files\weapondata</Filter>
+    </Text>
+    <Text Include="fwound\data\weapons\mp5sd.txt">
+      <Filter>Source Files\weapondata</Filter>
+    </Text>
+    <Text Include="fwound\data\weapons\python.txt">
+      <Filter>Source Files\weapondata</Filter>
+    </Text>
+    <Text Include="fwound\data\weapons\shotgun.txt">
+      <Filter>Source Files\weapondata</Filter>
+    </Text>
+    <Text Include="fwound\data\weapons\smaw.txt">
+      <Filter>Source Files\weapondata</Filter>
+    </Text>
+    <Text Include="changes.txt" />
+    <Text Include="consolecommands.txt" />
+    <Text Include="errors.txt" />
+    <Text Include="todo.txt" />
+    <Text Include="fwound\maps\water.fx">
+      <Filter>Shaders</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="SBAudigy.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\game.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icon.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icon.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="mainico.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

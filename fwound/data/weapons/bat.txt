@@ -8,7 +8,7 @@ clipsize		0
 ammotype		none
 reloadsize		0
 reloadtime		0
-weapontexture		mpunch.tga
+weapontexture		mpunch.bmp
 width			128
 guitexture		wep_chainsaw.bmp
 damage			15

@@ -1,5 +1,5 @@
 #include "core.h"
-#include "fmod.h"
+// #include "fmod.h"
 
 //inline DWORD F2DW( FLOAT f ) { return *((DWORD*)&f); }
 bool CCore::draggingsize=false;
@@ -203,7 +203,7 @@ void CCore::GameLoop()
 	if (bPaused) gfx.tick = 0;
 
 	if (m_FirstLoop) gfx.WriteToLog("Sound Update<br>");
-	FSOUND_Update();
+	// FSOUND_Update();
 
 	if (oldtimemultiplier!=1) sound.UpdateFrequency();
 	oldtimemultiplier=timemultiplier;
@@ -859,10 +859,10 @@ void CCore::StartLevelEnd(char* nextlevel)
 	LastEnemies=0;
 
 	sprintf(LevelEndNextLevel,nextlevel);
-	sound.CloseStream(landscape.music);
+	// sound.CloseStream(landscape.music);
 
-	landscape.music= NULL;
-	sound.PlayStream(landscape.music_levelcomplete);
+	// landscape.music= NULL;
+	// sound.PlayStream(landscape.music_levelcomplete);
 
 	EndLevel.Init();
 	iGameState = GAME_LEVELEND;
@@ -982,7 +982,7 @@ void CCore::StartLevelLoop(void)
 			lp = this->landscape.AddParticle(PARTICLE_GUI_COUNTDOWN,gfx.m_d3dpp.BackBufferWidth/2,gfx.m_d3dpp.BackBufferHeight/2);
 			if (lp!=NULL)
 			{
-				lp->textureoverride = textures.LoadTexture("textures/gui/three.tga");
+				lp->textureoverride = textures.LoadTexture("textures/gui/three.bmp");
 				lp->xscale = lp->xscale - (i*0.07f);
 			}
 		}
@@ -996,7 +996,7 @@ void CCore::StartLevelLoop(void)
 			lp = this->landscape.AddParticle(PARTICLE_GUI_COUNTDOWN,gfx.m_d3dpp.BackBufferWidth/2,gfx.m_d3dpp.BackBufferHeight/2);
 			if (lp!=NULL)
 			{
-				lp->textureoverride = textures.LoadTexture("textures/gui/two.tga");
+				lp->textureoverride = textures.LoadTexture("textures/gui/two.bmp");
 				lp->xscale = lp->xscale - (i*0.07f);
 			}
 		}
@@ -1010,7 +1010,7 @@ void CCore::StartLevelLoop(void)
 			lp = this->landscape.AddParticle(PARTICLE_GUI_COUNTDOWN,gfx.m_d3dpp.BackBufferWidth/2,gfx.m_d3dpp.BackBufferHeight/2);
 			if (lp!=NULL)
 			{
-				lp->textureoverride = textures.LoadTexture("textures/gui/one.tga");
+				lp->textureoverride = textures.LoadTexture("textures/gui/one.bmp");
 				lp->xscale = lp->xscale - (i*0.07f);
 			}
 		}
@@ -1060,8 +1060,8 @@ void CCore::StartLevelMusic(void)
 		sprintf(musicfile, "sound/music/%s", landscape.m_MapProperties.music);
 		if (Settings.enablemusic)
 		{
-			landscape.music = sound.LoadStream(musicfile,true);
-			landscape.InGameMusicChannel = sound.PlayStream(landscape.music);
+			// landscape.music = sound.LoadStream(musicfile,true);
+			// landscape.InGameMusicChannel = sound.PlayStream(landscape.music);
 		}
 	}
 
@@ -1084,8 +1084,8 @@ void CCore::ExitGame(void)
 void CCore::DoDieRoutine(void)
 {
 	
-	sound.CloseStream(landscape.music);
-	landscape.music=NULL;
+	// sound.CloseStream(landscape.music);
+	// landscape.music=NULL;
 	ResetRoundStats();
 	GlobalStats.Lives--;
 	timemultiplier = 0.0;
@@ -1159,7 +1159,7 @@ void CCore::RefreshMusicVolume(void)
 
 void CCore::Loading(int percent)
 {
-	if (t_Loading==NULL) t_Loading = textures.LoadTexture("textures/menu/loading.tga");
+	if (t_Loading==NULL) t_Loading = textures.LoadTexture("textures/menu/loading.bmp");
 	gfx.Begin();
 	gfx.Clear(0,0,0);
 
